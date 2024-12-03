@@ -1,0 +1,33 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 1.125rem;
+  background-color: var(--bg-tertiary);
+
+  & button {
+    display: block;
+    margin-inline: auto;
+    box-shadow: 0px 0px 40px rgba(146, 130, 250, 0.3);
+  }  
+}
+
+@media (width >=45rem) {
+  footer {
+    background-color: transparent;
+    padding-right: 4.5%;
+    padding-bottom: 2.3%;
+
+    & button {
+      margin-inline: initial;
+      margin-left: auto;
+      box-shadow: initial;
+      transition: box-shadow 400ms;
+
+      &:hover {
+        box-shadow: 0px 0px 40px rgba(146, 130, 250, 0.3);
+      }
+    }
+  }
+}

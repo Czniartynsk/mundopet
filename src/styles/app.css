@@ -1,0 +1,63 @@
+.app {
+  padding: .75rem 1.25rem;  
+
+  & .agenda {
+    & .input {
+      width: 11.5rem;
+      margin-block: .75rem 2rem;
+    }
+
+    & .schedules {
+      display: grid;
+      gap: .75rem;
+      height: 57vh;
+      overflow-y: auto;
+      padding-bottom: 2.75rem;
+    }
+  }
+
+  & header {
+    display: grid;
+    gap: .25rem;
+
+    & h1 {
+      font: var(--title);
+      color: var(--content-primary);
+    }
+
+    & p {
+      font: var(--paragraph-medium);
+      color: var(--content-secondary);
+    }
+  }
+
+}
+
+@media (width >= 45rem) {
+  .app {
+    width: max-content;
+    margin-inline: auto;
+    padding-block: initial;
+    padding-inline: 5rem;
+
+    & .agenda {
+      display: grid;
+      row-gap: 2rem;
+      column-gap: .75rem;
+      grid-template-columns: 33rem 11.5rem;
+
+      .input {
+        width: 11.5rem;
+        margin-block: .375rem;
+      }
+
+      .schedules {
+        grid-column: 1/3;
+        height: initial;
+        overflow-y: initial;
+
+        padding-bottom: initial;
+      }
+    }
+  }
+}

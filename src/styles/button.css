@@ -1,0 +1,17 @@
+button {
+  border: none;
+  border-radius: .5rem;
+  
+  padding: .75rem 1.25rem;
+  font: var(--label-large);
+  text-transform: uppercase;
+  
+  background: var(--bg-brand);
+  
+  transition: background 300ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-highlights);
+  }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundopet</title>
+  <link rel="stylesheet" href="./src/styles/index.css">
+
+  <link rel="shortcut icon" href="./src/assets/Dog-Duotone-Logo.svg" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+  <div id="tag-logo">
+    <img src="./src/assets/Logo.svg" alt="Logomarca Mundopet.">
+  </div>
+  <div class="app">
+    <div class="agenda">
+      <header>
+        <h1>Sua agenda</h1>
+        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      </header>
+      <div class="input">
+        <i><img src="./src/assets/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt="Schedule date." /></i>
+        <input type="date" id="schedule-date" name="schedule-date" />
+      </div>
+      <section class="schedules">
+        <div class="schedule-period">
+          <header>
+            <img src="./src/assets/icons/Weather/Sun Fog.svg" alt="Manhã">
+            <strong>Manhã</strong>
+            <span>09h-12h</span>
+          </header>
+          <ul id="period-morning" class="period">
+            <li>
+              <strong>09:00</strong>
+              <span><strong>Thor </strong>/ Fernanda Costa</span>
+              <span>Vacinação</span>
+              <a href="#">Revomer agendamento</a>
+            </li>
+          </ul>
+        </div>
+        <div class="schedule-period">
+          <header>
+            <img src="./src/assets/icons/Weather/Cloud Sun 4.svg" alt="Tarde">
+            <strong>Tarde</strong>
+            <span>13h-18h</span>
+          </header>
+          <ul id="period-afternoon" class="period">
+            <li>
+              <strong>13:00</strong>
+              <span><strong>Mel </strong>/ João Souza</span>
+              <span>Corte de unhas</span>
+              <a href="#">Revomer agendamento</a>
+            </li>
+            <li>
+              <strong>14:00</strong>
+              <span><strong>Bella </strong>/ Pedro Martins</span>
+              <span>Aplicação de anti-pulgas</span>
+              <a href="#">Revomer agendamento</a>
+            </li>
+            <li>
+              <strong>15:00</strong>
+              <span><strong>Simba </strong>/ Juliana Rocha</span>
+              <span>Tosa Higiênica</span>
+              <a href="#">Revomer agendamento</a>
+            </li>
+          </ul>
+        </div>
+        <div class="schedule-period">
+          <header>
+            <img src="./src/assets/icons/Weather/Moon Stars.svg" alt="Noite">
+            <strong>Noite</strong>
+            <span>19h-21h</span>
+          </header>
+          <ul id="period-night" class="period">
+            <li>
+              <strong>20:00</strong>
+              <span><strong>Max </strong> / Camila Santos</span>
+              <span>Limpeza de dentes</span>
+              <a href="#">Remover agendamento</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    
+    <footer>
+      <button type="button">Novo agendamento</button>
+    </footer>
+    
+    <!-- ==================== INICIO DO MODAL ============================================= -->
+
+    <section class="modal">
+      <form>
+        <header>
+          <h2>Agende um atendimento</h2>
+          <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </header>
+        <fieldset>
+          <div class="input-wrapper">
+            <label for="tutor" class="label">Nome do tutor</label>
+            <div class="input">
+              <i><img src="./src/assets/icons/User--Streamline-Solar.svg" alt="Tutor." /></i>
+              <input type="text" id="tutor" name="tutor" placeholder="Helena Souza" />
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="pet" class="label">Nome do pet</label>
+            <div class="input">
+              <i><img src="./src/assets/icons/Pet-Paw--Streamline-Core.svg" alt="Paw." /></i>
+              <input type="text" id="pet" name="pet" placeholder="Cheddar" />
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="phone" class="label">Telefone</label>
+            <div class="input">
+              <i><img src="./src/assets/icons/Phone--Streamline-Solar.svg" alt="Telefone." /></i>
+              <input type="tel" id="phone" name="phone" placeholder="(00) 0 0000-0000" />
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="description" class="label">Descrição do serviço</label>
+            <textarea name="description" id="description" placeholder="Banho e tosa"></textarea>
+          </div>
+
+          <div class="when">
+            <div class="input-wrapper">
+              <label for="date" class="label">Data</label>
+              <div class="input">
+                <i><img src="./src/assets/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt="Schedule date." /></i>
+                <input type="date" id="schedule-date" name="schedule-date" />
+              </div>
+            </div>
+            
+            <div class="input-wrapper">
+              <label for="time" class="label">Hora</label>
+              <div class="input">
+                <i><img src="./src/assets/icons/Clock-Circle--Streamline-Solar.svg" alt="Schedule hour." /></i>
+                <input type="time" id="schedule-hour" name="schedule-hour" />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit">Agendar</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- ==================== FIM DO MODAL ============================================= -->
+
+  </div>
+</body>
+</html>

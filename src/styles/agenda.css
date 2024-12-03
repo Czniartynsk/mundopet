@@ -1,0 +1,30 @@
+.schedule-period {
+  background-color: var(--bg-tertiary);
+  border-radius: .625rem;
+
+  & header {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem 1.25rem;
+    border-bottom: 1px solid #2E2C30;
+  
+    & strong {
+      display: block;
+      width: 100%;
+      color: var(--content-primary);
+    }
+    
+    & span {
+      justify-self: end;
+      color: var(--content-secondary);
+      min-width: fit-content;
+    }
+  
+    & strong, & span {
+      font: var(--title);
+      font-size: 1rem;
+    }
+  
+  }
+}

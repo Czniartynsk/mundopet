@@ -1,0 +1,78 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4.75rem 1.25rem 2.5rem;
+  
+  opacity: 0;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: appear 500ms forwards;
+  
+  & form {
+    display: grid;
+    gap: 1.75rem;
+    padding: 2.5rem 1.25rem;
+    background-color: var(--bg-tertiary);
+    border-radius: .75rem;
+    
+    scale: 0;
+    animation: appear 500ms forwards;
+    /* transition: scale 400ms; */
+    /* animation: appear 400ms forwards; */
+
+    /* backdrop-filter: none; */
+
+    & header {
+      & h2 {
+        font: var(--title);
+        color: var(--content-primary);
+      }
+  
+      & p {
+        font: var(--paragraph-medium);
+        color: var(--content-secondary);
+      }
+    }
+
+    & fieldset {
+      border: none;
+      display: grid;
+      gap: 1rem;
+
+      & .when {
+        display: grid;
+      }
+
+      & button {
+        width: 7.5rem;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+@media (width >=45rem) {
+  .modal {
+    padding-block: 1.5rem;
+
+    & form {
+      max-width: 30rem;
+      padding-inline: 2.5rem;
+
+      & .when {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+@keyframes appear {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
