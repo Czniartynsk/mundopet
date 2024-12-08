@@ -7,9 +7,13 @@
   padding: 4.75rem 1.25rem 2.5rem;
   
   opacity: 0;
+  scale: 0;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  animation: appear 500ms forwards;
+
+  animation-name: var(--animation-modal);
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
   
   & form {
     display: grid;
@@ -17,13 +21,13 @@
     padding: 2.5rem 1.25rem;
     background-color: var(--bg-tertiary);
     border-radius: .75rem;
+
+    animation-name: var(--animation-form);
+    animation-delay: .1s;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
     
     scale: 0;
-    animation: appear 500ms forwards;
-    /* transition: scale 400ms; */
-    /* animation: appear 400ms forwards; */
-
-    /* backdrop-filter: none; */
 
     & header {
       & h2 {
@@ -70,9 +74,42 @@
   }
 }
 
-@keyframes appear {
+@keyframes fadeInModal {
+  from {
+    scale: 1;
+    opacity: 0;
+  }
   to {
     scale: 1;
     opacity: 1;
+  }
+}
+@keyframes fadeOutModal {
+  from {
+    scale: 1;
+    opacity: 1;
+  }
+  to {
+    scale: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    scale: 0;
+    opacity: .8;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 0;
   }
 }

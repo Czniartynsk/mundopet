@@ -12,6 +12,12 @@ import "./styles/list.css";
 import "./styles/inputs.css";
 import "./styles/footer.css";
 import "./styles/modal.css";
+import "./styles/utility.css";
 
 // JS
-import "./services/schedule-new.js"
+import "./module/page-load.js"
+import "./module/schedules/load.js"
+
+import "./module/schedules/date-change.js"
+import "./services/new-schedule.js"
+import "./module/form/submit.js"

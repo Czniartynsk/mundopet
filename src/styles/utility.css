@@ -1,0 +1,16 @@
+.fade-inModal {
+  --animation-modal: fadeInModal;
+}
+
+.fade-outModal {
+  --animation-modal: fadeOutModal;
+}
+
+.fade-in {
+  --animation-form: fadeIn;
+}
+
+.fade-out {
+  --animation-form: fadeOut;
+  /* transition: scale 500ms, opacity 500ms; */
+}
