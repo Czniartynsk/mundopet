@@ -19,5 +19,6 @@ import "./module/page-load.js"
 import "./module/schedules/load.js"
 
 import "./module/schedules/date-change.js"
-import "./services/new-schedule.js"
+import "./services/schedule-new.js"
+import "./module/schedules/cancel.js"
 import "./module/form/submit.js"
